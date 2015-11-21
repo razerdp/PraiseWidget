@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="widget.Demo"
+    >
+
+    <widget.praisewidget.widget.PraiseWidget
+        android:id="@+id/praise_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2px"
+        android:lineSpacingMultiplier="1.2"
+
+        android:maxLines="5"
+        />
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/praise_widget"
+        android:layout_marginTop="8dp"
+        />
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/empty_view"
+        android:layout_below="@id/praise_widget"
+        android:layout_marginTop="8dp"
+        android:text="add"
+        />
+    <Button
+        android:id="@+id/btn_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/empty_view"
+        android:layout_below="@id/praise_widget"
+        android:layout_marginTop="8dp"
+        android:text="sub"
+        />
+
+</RelativeLayout>

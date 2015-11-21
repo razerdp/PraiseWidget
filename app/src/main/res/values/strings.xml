@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PraiseWidget</string>
+    <string name="praise_zan" formatted="false">等%d人</string>
+</resources>
