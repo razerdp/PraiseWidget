@@ -11,13 +11,13 @@
     tools:context="widget.Demo"
     >
 
-    <widget.praisewidget.widget.PraiseWidget
+    <widget.praisewidget.widget.PraiseWidget xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/praise_widget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="2px"
         android:lineSpacingMultiplier="1.2"
-
+        app:font_size="16sp"
         android:maxLines="5"
         />
     <View

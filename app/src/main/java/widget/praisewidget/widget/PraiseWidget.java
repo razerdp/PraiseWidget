@@ -54,6 +54,7 @@ public class PraiseWidget extends TextView {
     private int mMaxLine = 3;
     float LineSpacingMultiplier = 0.0f;
     float LineSpacingExtra = 0.0f;
+    private int clickBgColor=0x00000000;
 
     //缓存
     private static LruCache<String, SpannableStringBuilderAllVer> mCache =
@@ -97,10 +98,12 @@ public class PraiseWidget extends TextView {
         TypedArray systemAttr =
             context.obtainStyledAttributes(attrs, new int[] { android.R.attr.maxLines });
         this.mMaxLine=systemAttr.getInt(0,3);
+        this.clickBgColor=attr.getColor(R.styleable.PraiseWidget_click_bg_color,0x00000000);
         attr.recycle();
         systemAttr.recycle();
         //如果不设置，clickableSpan不能响应点击事件
         this.setMovementMethod(LinkMovementMethod.getInstance());
+        this.setHighlightColor(0x00000000);
     }
 
     @Override
@@ -173,10 +176,10 @@ public class PraiseWidget extends TextView {
             PraiseBean bean = mBeans.get(i);
             if (i == 0) {
                 spanBuilder.append("  " + bean.userNick,
-                    new PraiseClick(mContext, bean.userNick, bean.userId,color), 0);
+                    new PraiseClick(mContext, bean.userNick, bean.userId,color,size), 0);
             } else {
                 spanBuilder.append(mBeans.get(i).userNick,
-                    new PraiseClick(mContext, bean.userNick, bean.userId,color), 0);
+                    new PraiseClick(mContext, bean.userNick, bean.userId,color,size), 0);
             }
             if (i != LastPos) spanBuilder.append(", ");
         }

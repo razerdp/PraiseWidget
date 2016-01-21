@@ -3,6 +3,7 @@
 
     <!--显示点赞控件-->
     <declare-styleable name="PraiseWidget">
+        <attr name="click_bg_color" format="color"/>
         <attr name="font_color" format="color"/>
         <attr name="font_size" format="dimension"/>
         <attr name="zan_icon" format="reference"/>

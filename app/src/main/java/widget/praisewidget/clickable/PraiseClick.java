@@ -16,6 +16,7 @@ public class PraiseClick extends ClickableSpan{
     private int userID;
     private String userNick;
     private Context mContext;
+    private int textSize;
 
     public PraiseClick(Context context, String userNick, int userID, int color) {
         mContext = context;
@@ -35,7 +36,10 @@ public class PraiseClick extends ClickableSpan{
     public PraiseClick(Context context, String userNick, int userID) {
        this(context,userNick,userID,0);
     }
-
+    public PraiseClick(Context context, String userNick, int userID, int color,int textSize) {
+       this(context,userNick,userID,color);
+       this.textSize=textSize;
+    }
     @Override
     public void onClick(View widget) {
         Toast.makeText(mContext,"当前用户名是： "+userNick+"   它的ID是： "+userID,Toast.LENGTH_SHORT).show();
@@ -51,6 +55,7 @@ public class PraiseClick extends ClickableSpan{
         } else {
             ds.setColor(color);
         }
+        ds.setTextSize(textSize);
         ds.setUnderlineText(false);
     }
 }
