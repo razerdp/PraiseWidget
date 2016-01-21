@@ -7,6 +7,7 @@
 ##使用方法：</br>
 在xml定义控件，findViewById后，使用setDataByArray传入数据（本例子用的是PraiseBean），您可以改成你需要用的</br>
 正因为如此，我并没有抽取为一个Library</br>
+如果需要跟显示图一样超过5行就显示“等xx人”，**请跟TextView一样给定android:maxLines="5"**
 </br>
 ##可定义的属性：(attrs.xml)</br>
 ```html
