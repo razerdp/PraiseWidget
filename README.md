@@ -5,7 +5,7 @@
 实现流程：http://blog.csdn.net/mkfrank/article/details/49963779
 </br>
 ## 效果图：</br>
-![image](https://github.com/razerdp/PraiseWidget/blob/master/img/praise widget.gif)
+![image](https://github.com/razerdp/PraiseWidget/blob/master/img/praise%20widget.gif)
 ## 使用方法：</br>
 在xml定义控件，findViewById后，使用setDataByArray传入数据（本例子用的是PraiseBean），您可以改成你需要用的</br>
 正因为如此，我并没有抽取为一个Library</br>
